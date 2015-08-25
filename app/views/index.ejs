@@ -8,13 +8,17 @@
 
         <script src= "js/app.js"></script>
         <script src= "js/controllers.js"></script>
-        <script src= "js/routing.js"></script>
 
     </head>
     <body ng-controller= "MainCtrl">
         <% if (user) { %>
+
             <h2> Hello <%=user%>
             <a href= "/logout">Logout</a>
+
+            </br>
+            <div ui-view></div>
+
         <% } else { %>
             <a href= "/register">Register</a>
             <a href= "/login">Login</a>
