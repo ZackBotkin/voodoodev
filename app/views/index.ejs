@@ -4,6 +4,12 @@
         <title><%= title %></title>
     </head>
     <body>
-        <h1><%= title %></h1>
+        <% if (user) { %>
+            <h2> Hello <%=user%>
+            <a href= "/logout">Logout</a>
+        <% } else { %>
+            <a href= "/register">Register</a>
+            <a href= "/login">Login</a>
+        <% } %>
     </body>
 </html>
